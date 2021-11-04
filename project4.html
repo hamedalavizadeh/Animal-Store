@@ -1,0 +1,659 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <link rel="stylesheet" href="css/navbar.css"/>
+    <link rel="stylesheet" href="css/topSlider.css"/>
+    <link rel="stylesheet" href="css/Slider.css"/>
+    <link rel="stylesheet" href="css/pageSelect.css"/>
+    <link rel="stylesheet" href="css/picture.css"/>
+    <link rel="stylesheet" href="css/news.css"/>
+    <style>
+        html,body{
+            margin:0 0;
+            padding: 0 0;
+        }
+        .footer{
+            width:80%;
+            height:200px;
+            background: #2b2b2b;
+            margin:auto;
+            border-top:3px solid gray;
+            box-sizing: border-box;
+        }
+        .footer #d1{
+            width:50%;
+            height:100%;
+            float:right;
+        }
+        .footer #d2{
+            width:25%;
+            height:100%;
+            float:right;
+        }
+        .footer #d3{
+            width:25%;
+            height:100%;
+            float:right;
+        }
+        .footer #d1 h1{
+            float:right;
+            font-size: 14pt;
+            color:whitesmoke;
+
+            margin-right:40px;
+            margin-top:30px;
+            border-bottom: 2px solid gray;
+            padding-bottom: 6px;
+        }
+        .footer #d1 p{
+            width:50%;
+            float:right;
+            font-family: Shabnam;
+            font-size: 10pt;
+            color:white;
+            opacity:0.8;
+            margin-right:-80px;
+            margin-top:80px;
+            direction: rtl;
+        }
+        .footer #d2 h1{
+            float:right;
+            font-size: 14pt;
+            color:whitesmoke;
+            margin-right:40px;
+            margin-top:30px;
+            border-bottom: 2px solid gray;
+            padding-bottom: 6px;
+        }
+        .footer #d2 ul{
+            float:right;
+            direction: rtl;
+            margin-top: 70px;
+            margin-right: -110px;
+        }
+        .footer #d2 ul li{
+            color:whitesmoke;
+            margin:6px 0;
+            font-family: Shabnam;
+            font-size: 14px;
+            cursor: pointer;
+            opacity: 0.9;
+
+        }
+        .footer #d2 ul li:hover{
+            opacity:0.6;
+        }
+        .icons{
+            display:inline-flex;
+            margin-left: 50px;
+        }
+        .icons a{
+            margin:80px 10px;
+            text-decoration: none;
+            color:#fff;
+            display:block;
+            position:relative;
+
+        }
+        .icons a .layer{
+            width:50px;
+            height:50px;
+            transition: transform 0.3s;
+        }
+        .icons a:hover .layer{
+            transform: rotate(-35deg) skew(20deg);
+        }
+        .icons a .layer span{
+            position:absolute;
+            top:0;
+            left:0;
+            height:100%;
+            width:100%;
+            border:1px solid #fff;
+            border-radius: 5px;
+            transition: all 0.3s;
+        }
+        .icons a:hover .layer span:nth-child(1){
+            opacity:0.2;
+        }
+        .icons a:hover .layer span:nth-child(2){
+            opacity:0.4;
+            transform: translate(5px,-5px);
+        }
+        .icons a:hover .layer span:nth-child(3){
+            opacity:0.6;
+            transform: translate(10px,-10px);
+        }
+        .icons a:hover .layer span:nth-child(4){
+            opacity:0.8;
+            transform: translate(15px,-15px);
+        }
+        .icons a:hover .layer span:nth-child(5){
+            opacity:1;
+            transform: translate(20px,-20px);
+        }
+        .icons a .layer span.fab{
+            font-size:30px;
+            line-height: 55px;
+            text-align:center;
+        }
+        .icons a:nth-child(1) .layer span ,
+        .icons a:nth-child(1) .text{
+            color:#4267B2;
+            border-color:#4267B2;
+        }
+        .icons a:nth-child(2) .layer span,
+        .icons a:nth-child(2) .text{
+            color:#1DA1F2;
+            border-color:#1DA1F2;
+        }
+        .icons a:nth-child(3) .layer span,
+        .icons a:nth-child(3) .text{
+            color:#E1306C;
+            border-color:#E1306C;
+        }
+        .icons a:nth-child(4) .layer span,
+        .icons a:nth-child(4) .text{
+            color:#2867B2;
+            border-color:#2867B2;
+        }
+        .icons a:nth-child(5) .layer span,
+        .icons a:nth-child(5) .text{
+            color:#FF0000;
+            border-color:#FF0000;
+        }
+        .icons a:hover:nth-child(1) .layer span{
+            box-shadow: -1px 1px 3px #4267B2;
+        }
+        .icons a:hover:nth-child(2) .layer span{
+            box-shadow: -1px 1px 3px #1DA1F2;
+        }
+        .icons a:hover:nth-child(3) .layer span{
+            box-shadow: -1px 1px 3px #E1306C;
+        }
+        .icons a:hover:nth-child(4) .layer span{
+            box-shadow: -1px 1px 3px #2867B2;
+        }
+        .icons a:hover:nth-child(5) .layer span{
+            box-shadow: -1px 1px 3px #FF0000;
+        }
+        .icons a .text{
+            position:absolute;
+            left:30px;
+            bottom:-5px;
+            opacity:0;
+            transform: translateX(-50%);
+            transition: bottom 0.3s ease,opacity 0.3s ease;
+        }
+        .icons a:hover .text{
+            bottom: -35px;
+            opacity:1;
+        }
+
+
+
+
+
+
+
+
+
+        @media  screen and (max-width: 500px) {
+            html{
+                background: #2b2b2b;
+            }
+            #navbar-top{
+                width:100%;
+            }
+            #p2{
+                display: none;
+            }
+            #p4{
+                display: none;
+            }
+            .top-slider{
+                width:100%;
+            }
+            #input{
+                position:relative;
+                margin-right:12px;
+            }
+            .divTopSlider #btn1{
+                width:50px;
+                margin-left:64px;
+            }
+            .divTopSlider #btn2{
+                width:50px;
+                margin-left:10px;
+            }
+            #divSearch{
+                display: none;
+            }
+            .slider{
+                width:100%;
+                text-align:center;
+            }
+            .pictureSlider{
+                width:100%;
+            }
+            .imageDivSlider #img1{
+                display:none;
+            }
+            .imageDivSlider #img2{
+                display:block;
+            }
+            .select1{
+                width:100%;
+            }
+            .picLabel1 .cont1{
+                width:50%;
+                margin:20px 25%;
+            }
+            .select1{
+                background: #2b2b2b;
+            }
+            .topSelect1{
+                display:none;
+            }
+
+            .sections{
+                width:100%;
+            }
+            .sec1sec1{
+                width:100%;
+                margin-bottom: 30px;
+                margin-top:30px;
+            }
+            .sec1sec2{
+                width:100%;
+                margin-bottom: 30px;
+            }
+            .sec2sec3{
+                width:100%;
+                margin-bottom: 30px;
+            }
+            .sec2sec4{
+                width:100%;
+                margin-bottom: 30px;
+            }
+            .sections{
+                background: #2b2b2b;
+            }
+            .new{
+                display: none;
+            }
+            .footer #d1{
+                width: 100%;
+            }
+            .footer #d2{
+                display: none;
+            }
+            .footer #d3{
+                display: none;
+            }
+            .footer #d1 p{
+                width:100%;
+                margin-top:10px;
+                margin-right:20px;
+            }
+
+
+
+
+        }
+    </style>
+    <script src="jquery-3.4.1.min.js"></script>
+    <script>
+        
+    </script>
+</head>
+<body>
+<div id="navbar-top">
+    <div class="divInDiv">
+    <p id="p1" class="pa"><a href="#">کانال تلگرام</a></p>
+    <p id="p2" class="pa"><a href="#">درباره  </a></p>
+    <p id="p3" class="pa"><a href="#">ارتباط با ما</a></p>
+    <p id="p4" class="pa"><a href="#">سئوالات متداول</a></p>
+    </div>
+</div>
+
+<div class="top-slider">
+    <div class="divTopSlider">
+        <img src="images/logoLovelyPets.png" id="logo" title="lovelyPet"/>
+        <input type="text" placeholder="دنبال چی میگردی؟" id="input"/>
+        <button id="btn1">ورود</button>
+        <button id="btn2">ثبت نام</button>
+        <div id="divSearch">
+            <img src="images/Group 18.png" id="searchIcon" title="search for find"/>
+        </div>
+    </div>
+</div>
+<div class="slider">
+    <ul>
+        <li><a href="#" >صفحه اصلی</a></li>
+        <li><a href="#" >دسته بندی</a></li>
+        <li><a href="#" >مطالب آموزشی</a></li>
+    </ul>
+</div>
+
+<nav class="pictureSlider">
+    <div class="imageDivSlider">
+        <img src="images/Group 29.png" id="img1"/>
+        <img src="images/home-pets-logo-icon_126523-600.jpg" id="img2"/>
+    </div>
+</nav>
+
+<div class="select1">
+    <div class="topSelect1">
+        <p class="label1">گربه ها</p>
+        <img class="catIcon" src="images/New%20folder/Artboard 1.png"/>
+        <p class="label2"><a href="#">مشاهده همه پست ها</a></p>
+    </div>
+    <div class="picLabel1">
+        <div class="cont1">
+             <a href="#"><img  src="images/photo-1548975488-0384bc5c7a6b.jpg" class="label1Images"/></a>
+             <div class="textLabel1">
+                 <p class="title1">گربه سانان</p>
+                 <h3 class="h3title"> !!گربه ها موجودات عجیبی هستند</h3>
+                 <h4 class="h4Title">در این اره توصیحاتی را داده و قرار خواهد گرفت</h4>
+                 <button class="btn1">بیشتر</button>
+             </div>
+        </div>
+
+        <div class="cont1">
+            <a href="#"><img src="images/photo-1566847438217-76e82d383f84.jpg"  class="label1Images"/></a>
+            <div class="textLabel1">
+                <p class="title1">گربه سانان</p>
+                <h3 class="h3title"> !!گربه ها موجودات عجیبی هستند</h3>
+                <h4 class="h4Title">در این اره توصیحاتی را داده و قرار خواهد گرفت</h4>
+                <button class="btn1">بیشتر</button>
+            </div>
+        </div>
+
+        <div class="cont1">
+            <a href="#"><img src="images/photo-1598752616969-12ffea9bd3de.jpg"  class="label1Images"/></a>
+            <div class="textLabel1">
+                <p class="title1">گربه سانان</p>
+                <h3 class="h3title"> !!گربه ها موجودات عجیبی هستند</h3>
+                <h4 class="h4Title">در این اره توصیحاتی را داده و قرار خواهد گرفت</h4>
+                <button class="btn1">بیشتر</button>
+            </div>
+        </div>
+
+        <div class="cont1">
+            <a href="#"><img src="images/photo-1593626986521-f24d25d60103.jpg"  class="label1Images"/></a>
+            <div class="textLabel1">
+                <p class="title1">گربه سانان</p>
+                <h3 class="h3title"> !!گربه ها موجودات عجیبی هستند</h3>
+                <h4 class="h4Title">در این اره توصیحاتی را داده و قرار خواهد گرفت</h4>
+                <button class="btn1">بیشتر</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="select1">
+    <div class="topSelect1">
+        <p class="label1">سگ ها</p>
+        <img class="dogIcon" src="images/abcd53d0f9c04c541b4e31dcca6dd827-guide-dog-icon-by-vexels.png"/>
+        <p class="label2"><a href="#">مشاهده همه پست ها</a></p>
+    </div>
+    <div class="picLabel1">
+        <div class="cont1">
+            <a href="#"><img  src="images/photo-1566955014039-f43848bba2c8.jpg" class="label1Images"/></a>
+            <div class="textLabel1">
+                <p class="title1">سگ سانان</p>
+                <h3 class="h3title"> !!سگ ها موجودات عجیبی هستند</h3>
+                <h4 class="h4Title">در این اره توصیحاتی را داده و قرار خواهد گرفت</h4>
+                <button class="btn1">بیشتر</button>
+            </div>
+        </div>
+
+        <div class="cont1">
+            <a href="#"><img src="images/photo-1575809983151-38458542a6fc.jpg"  class="label1Images"/></a>
+            <div class="textLabel1">
+                <p class="title1">سگ سانان</p>
+                <h3 class="h3title"> !!سگ ها موجودات عجیبی هستند</h3>
+                <h4 class="h4Title">در این اره توصیحاتی را داده و قرار خواهد گرفت</h4>
+                <button class="btn1">بیشتر</button>
+            </div>
+        </div>
+
+        <div class="cont1">
+            <a href="#"><img src="images/photo-1585866139885-0dff14c14090.jpg"  class="label1Images"/></a>
+            <div class="textLabel1">
+                <p class="title1">سگ سانان</p>
+                <h3 class="h3title"> !!سگ ها موجودات عجیبی هستند</h3>
+                <h4 class="h4Title">در این اره توصیحاتی را داده و قرار خواهد گرفت</h4>
+                <button class="btn1">بیشتر</button>
+            </div>
+        </div>
+
+        <div class="cont1">
+            <a href="#"><img src="images/photo-1583791064224-d59915db86c3.jpg"  class="label1Images"/></a>
+            <div class="textLabel1">
+                <p class="title1">سگ سانان</p>
+                <h3 class="h3title"> !!سگ ها موجودات عجیبی هستند</h3>
+                <h4 class="h4Title">در این اره توصیحاتی را داده و قرار خواهد گرفت</h4>
+                <button class="btn1">بیشتر</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="sections">
+    <div class="topSection">
+        <img src="images/tile.png"/>
+        <p>دسته بندی ها</p>
+    </div>
+
+    <div class="sec1">
+        <div class="sec1sec1">
+            <div class="dfd">
+            <img src="images/scarlet-tanager-branch_181624-6092.jpg"/>
+            <div class="brds">
+                <p>پرنده ها</p>
+            </div>
+            </div>
+        </div>
+
+        <div class="sec1sec2">
+            <div class="dfd">
+                <img src="images/cute-puppies-pomeranian-mixed-breed-pekingese-dog-run-grass-with-happiness_34266-1082.jpg"/>
+                <div class="brds">
+                    <p>سگ ها</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="sec2">
+        <div class="sec2sec3">
+            <div class="dfd">
+                <img src="images/python_23-2148167341.jpg"/>
+                <div class="brds">
+                    <p>خزنده ها</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="sec2sec4">
+            <div class="dfd">
+                <img src="images/photo-1534575180408-b7d7c0136ee8.jpg"/>
+                <div class="brds">
+                    <p>آبزیان</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="new">
+
+    <div class="new1">
+        <div class="textNew">
+            <p>جدیدترین مطالب</p>
+        </div>
+        <div class="newNew1">
+            <div class="newImage">
+                <img src="images/photo-1561488337-43f10c515a13.jpg"/>
+            </div>
+            <h2>انواع و نژاد</h2>
+            <p> در این باره در این پارا گراف توصیج داده خواهد شد و در اینجا قرار خواهد داده شد</p>
+            <h4>سگ ها</h4>
+            <h5> #سگ #دورمن #هاسکی  </h5>
+        </div>
+
+
+        <div class="newNew1">
+            <div class="newImage">
+                <img src="images/photo-1548161955-dd1bf41fbc92.jpg"/>
+            </div>
+            <h2>انواع و نژاد</h2>
+            <p> در این باره در این پارا گراف توصیج داده خواهد شد و در اینجا قرار خواهد داده شد</p>
+            <h4>گربه ها</h4>
+            <h5> #گربه #میمو #ملوس  </h5>
+        </div>
+
+
+        <div class="newNew1">
+            <div class="newImage">
+                <img src="images/photo-1475851624515-90a9a335785d.jpg"/>
+            </div>
+            <h2>انواع و نژاد</h2>
+            <p> در این باره در این پارا گراف توصیج داده خواهد شد و در اینجا قرار خواهد داده شد</p>
+            <h4>مار ها</h4>
+            <h5> #مار #افعی #زنگی  </h5>
+        </div>
+
+
+        <div class="newNew1">
+            <div class="newImage">
+                <img src="images/photo-1516025455112-e73ad04772e8.jpg"/>
+            </div>
+            <h2>انواع و نژاد</h2>
+            <p> در این باره در این پارا گراف توصیج داده خواهد شد و در اینجا قرار خواهد داده شد</p>
+            <h4>همستر</h4>
+            <h5> #همستر #دیبو #نایسی  </h5>
+        </div>
+    </div>
+
+    <div class="new2">
+        <div class="textNew">
+            <p>محبوب ترین ها</p>
+        </div>
+
+        <div class="mahbob">
+            <div class="mahimg">
+            <img src="images/beautiful-parrot-sun-conure-tree-branch_35766-729.jpg"/>
+                <div class="border">
+                    <h1>همین الان مشاهده کنید</h1>
+                </div>
+            </div>
+        </div>
+        <div class="mahbob">
+            <div class="mahimg">
+                <img src="images/close-up-husky-s-eyes_1232-1235.jpg"/>
+                <div class="border">
+                    <h1>همین الان مشاهده کنید</h1>
+                </div>
+            </div>
+        </div>
+        <div class="mahbob">
+            <div class="mahimg">
+                <img src="images/easter-bunny-easter-eggs-spring-green-grass-cute-rabbit_85523-1099.jpg"/>
+                <div class="border">
+                    <h1>همین الان مشاهده کنید</h1>
+                </div>
+            </div>
+        </div>
+        <nav>
+        <div class="number"><p>1</p></div>
+        <div class="number"><p>2</p></div>
+        <div class="number"><p>3</p></div>
+        <div class="number"><p>4</p></div>
+        </nav>
+    </div>
+
+
+</div>
+
+<div class="footer">
+    <div id="d1">
+        <h1> درباره لاولی پت</h1>
+        <p>این قسمت را قرار دادیم برای بچه های تولید محتوا تا مطالب مرتبط را قرار دهند و هر آنچه در این جا لازم است را بگویند </p>
+    </div>
+    <div id="d2">
+        <h1>بخش های سایت</h1>
+        <ul>
+            <li>صفحه اصلی</li>
+            <li>دسته بندی</li>
+            <li>مطالب آموزیس</li>
+            <li>قوانین و مقررات</li>
+        </ul>
+
+    </div>
+    <div id="d3">
+        <div class="icons">
+            <a href="">
+                <div class="layer">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span class="fab fa-facebook"></span>
+                </div>
+                <div class="text">Facebook</div>
+            </a>
+            <a href="">
+                <div class="layer">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span class="fab fa-twitter"></span>
+                </div>
+                <div class="text">Twitter</div>
+            </a>
+            <a href="">
+                <div class="layer">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span class="fab fa-instagram"></span>
+                </div>
+                <div class="text">Instagram</div>
+            </a>
+            <a href="">
+                <div class="layer">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span class="fab fa-linkedin"></span>
+                </div>
+                <div class="text">Linkedin</div>
+            </a>
+            <a href="">
+                <div class="layer">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span class="fab fa-youtube"></span>
+                </div>
+                <div class="text">Youtube</div>
+            </a>
+        </div>
+    </div>
+</div>
+</body>
+</html>

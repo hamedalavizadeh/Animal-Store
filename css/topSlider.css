@@ -1,0 +1,89 @@
+.top-slider{
+    width:80%;
+    height:60px;
+    background: whitesmoke;
+    margin: 0 auto;
+}
+.divTopSlider{
+    width:100%;
+    height:100%;
+    position:relative;
+}
+.divTopSlider #logo{
+    position:relative;
+    float: right;
+    width:140px;
+    margin-top:8px;
+    cursor:pointer;
+}
+.divTopSlider #logo:hover{
+    opacity: 0.9;
+}
+#input{
+    direction: rtl;
+    width:40%;
+    height:30px;
+    border-radius: 10px;
+    border:none;
+    margin-top:14px;
+    background: gainsboro;
+    outline: none;
+    float: right;
+    margin-right:220px;
+    font-family: Shabnam;
+    padding-right:10px;
+}
+#input:hover{
+    background:darkgrey;
+}
+.divTopSlider #btn1{
+    position: absolute;
+    width:70px;
+    height:30px;
+    border:1px solid #27BDD8;
+    background:white;
+    border-radius: 20px;
+    margin-top:14px;
+    margin-left:140px;
+    box-sizing: border-box;
+    transition:0.5s;
+    cursor:pointer;
+    font-family: "adobe arabic";
+}
+.divTopSlider #btn2{
+    position: absolute;
+    width:70px;
+    height:30px;
+    border:1px solid #27BDD8;
+    background:white;
+    border-radius: 20px;
+    margin-top:14px;
+    margin-left:56px;
+    box-sizing: border-box;
+    transition:0.5s;
+    cursor:pointer;
+    font-family: "adobe arabic";
+}
+.divTopSlider #btn1:hover{
+    background-color: #27BDD8;
+    color:white;
+}
+.divTopSlider #btn2:hover{
+    background-color: #27BDD8;
+    color:white;
+}
+#divSearch{
+    width:34px;
+    height:34px;
+    position:absolute;
+    background:#E7D079;
+    border-radius: 50%;
+    margin-left: 386px;
+    margin-top:13px;
+}
+#searchIcon{
+    width:20px;
+    height:20px;
+    margin-top:7px;
+    margin-left:7px;
+}

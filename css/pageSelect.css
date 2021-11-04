@@ -1,0 +1,143 @@
+.select1{
+    width:80%;
+    height:380px;
+    background:whitesmoke;
+    margin:0 auto;
+    text-align: center;
+}
+.select1 .topSelect1{
+    width:80%;
+    height:50px;
+    border-bottom: 1px solid gray;
+    margin:0 auto;
+    box-sizing: border-box ;
+    direction: rtl;
+}
+.select1 .topSelect1 .label1{
+    position:absolute;
+    float:right;
+    margin-top:26px;
+    font-family: Shabnam;
+    font-weight: bold;
+    color:rebeccapurple;
+    border-bottom: 3px solid rebeccapurple;
+}
+.dogIcon{
+    position:absolute;
+    height:50px;
+    margin-top:9px;
+    margin-right:610px;
+}
+.catIcon{
+    position:absolute;
+    width:46px;
+    margin-top:9px;
+    margin-right:-20px;
+}
+
+.select1 .topSelect1 .label2{
+    position:absolute;
+    margin-top:26px;
+    margin-right:868px;
+}
+.select1 .topSelect1 .label2 a{
+    text-decoration: none;
+    font-family: Shabnam;
+    color:rebeccapurple;
+}
+.select1 #topSelect1 .label2 a:hover{
+    opacity:0.6;
+}
+.picLabel1{
+    width:100%;
+    height:330px;
+    direction: rtl;
+}
+.picLabel1 .cont1{
+    width:20%;
+    height:284px;
+    float:left;
+    margin:24px 31px;
+    transition:0.4s;
+}
+.label1Images{
+    width:100%;
+    height:100%;
+    border-radius: 40px;
+    position:relative;
+    -webkit-box-shadow:0 6px 6px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    -moz-box-shadow:0 6px 6px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    box-shadow:4px 8px 6px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+}
+.picLabel1 .cont1:hover{
+    height:300px;
+    margin-top:8px;
+}
+.label1Images:before
+{
+    content:"";
+    position:absolute;
+    z-index:-1;
+    -webkit-box-shadow:0 0 20px rgba(0,0,0,0.8);
+    -moz-box-shadow:0 0 20px rgba(0,0,0,0.8);
+    box-shadow:0 0 20px rgba(0,0,0,0.8);
+    top:0;
+    bottom:0;
+    left:10px;
+    right:10px;
+    -moz-border-radius:100px / 10px;
+    border-radius:100px / 10px;
+}
+.cont1 .textLabel1{
+    width:100%;
+    height:138px;
+    background:whitesmoke;
+    position:relative;
+    margin-top:-142px;
+    border-radius: 40px;
+    opacity:0.9;
+}
+.cont1 .title1{
+    position:absolute;
+    color:dodgerblue;
+    font-family:Shabnam;
+    font-size: 14px;
+    font-weight: bold;
+    margin-right:18px;
+}
+.cont1 .h3title{
+    position:absolute;
+    font-family: Shabnam;
+    font-weight: bolder;
+    font-size:14px;
+    margin-top:40px;
+    margin-right: 24px;
+    direction: ltr;
+}
+.cont1 .h4Title{
+    position:absolute;
+    margin-top:70px;
+    font-size:12px;
+    color:gray;
+    margin-right:28px;
+}
+.cont1 .btn1{
+    position: absolute;
+    width:70px;
+    height:30px;
+    border:1px solid #27BDD8;
+    background:white;
+    border-radius: 20px;
+    margin-top:98px;
+    margin-right: -36px;
+    cursor:pointer;
+}
+.cont1 .btn1:hover{
+    background:#27BDD8;
+
+}
+.dogIcon{
+    position:absolute;
+    width:46px;
+    margin-top:9px;
+}
